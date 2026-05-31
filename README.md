@@ -359,33 +359,6 @@ expensive faithfulness leaders for cases that need a second, model-faithful chec
 
 ---
 
-## Outputs Produced
-
-The benchmark and training notebooks are shipped **with their cell outputs intact**, so
-all results, tables, and figures are viewable directly in the notebooks without rerunning
-anything. The generated files themselves are **not committed** to the repository; running
-`02_xai_benchmark.ipynb` regenerates them locally in an `xai_outputs/` folder:
-
-- `metrics_summary_global.csv`, `metrics_summary_{benign,malignant,normal}.csv`: mean ± std per method × metric
-- `metrics_long.csv`: tidy long-format table for plotting
-- `cd_*.png`: critical-difference diagrams (Deletion, Insertion, Dice, Avg Drop)
-- `disagreement_tau.png`, `kendall_tau.npy`: Kendall-τ heatmap and matrix
-- `per_class.png`: per-class boxplots
-- `qualitative_final.png`: side-by-side saliency comparison (benign + malignant)
-- `smoke_test.png`: quick sanity check of all ten methods on one image
-- `xai_cost_per_image.csv`, `xai_cost_per_image.png`: per-image runtime, GPU memory, and forward-call cost
-- `saliencies/img_XXXX.npz`: per-image saliency maps for every method
-- `raw_results.json`, `labels.npy`, `preds.npy`: raw per-image scores
-
-> **Rendering the figures in this README:** the generated `xai_outputs/` folder is not
-> committed, so the images embedded above won't display until you copy the saved PNGs into
-> the committed `assets/` folder after running the notebook, e.g.
-> `cp xai_outputs/{qualitative_final,disagreement_tau,xai_cost_per_image}.png assets/`.
-> The pipeline diagram (`assets/pipeline.png`) is not produced by the notebook, so export
-> it from the paper or recreate it separately.
-
----
-
 ## Reproducibility Notes
 
 - Seeds are fixed (42) for the data split, training, and XAI subset selection.

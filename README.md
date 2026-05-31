@@ -359,22 +359,6 @@ expensive faithfulness leaders for cases that need a second, model-faithful chec
 
 ---
 
-## Reproducibility Notes
-
-- Seeds are fixed (42) for the data split, training, and XAI subset selection.
-- The patient-disjoint split is fixed and shipped, so results are deterministic given the
-  same weights; minor variation can still arise from CUDA non-determinism and library
-  versions.
-- The evaluation uses a stratified 60-image subset for tractability; a full-test-set run
-  is left as an extension.
-- Cost numbers are from a single timed run on a single image (Tesla T4); they are intended
-  as relative guidance, not exact benchmarks. Use `N_REPEATS > 1` for stable figures.
-- Before publishing, make sure the checkpoint filename saved by `01_maxvit_train.ipynb`
-  matches the `MODEL_PATH` set in `02_xai_benchmark.ipynb`, and check the dataset directory
-  spelling (`unified_ultasound_dataset`).
-
----
-
 ## Citation
 
 If you use this code, please cite the paper:

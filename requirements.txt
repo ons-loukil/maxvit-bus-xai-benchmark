@@ -1,0 +1,36 @@
+# Python 3.10+ (developed on 3.12). A CUDA-capable GPU is recommended.
+#
+# For GPU PyTorch, install torch/torchvision from the official index matching
+# your CUDA version, e.g.:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# then run: pip install -r requirements.txt
+
+# --- Deep learning core ---
+torch>=2.2
+torchvision>=0.17        # provides maxvit_t + MaxVit_T_Weights
+
+# --- XAI methods ---
+grad-cam>=1.5.0          # imported as pytorch_grad_cam (Grad-CAM, Score-CAM, LayerCAM, Ablation-CAM)
+captum>=0.7.0            # Integrated Gradients, NoiseTunnel (SmoothGrad)
+shap>=0.45.0             # KernelExplainer over superpixels
+lime>=0.2.0.1            # LimeImageExplainer
+scikit-image>=0.22.0     # SLIC superpixels, segmentation
+
+# --- Metrics, statistics, evaluation ---
+scikit-learn>=1.3.0      # classification_report, confusion_matrix
+scipy>=1.11.0            # friedmanchisquare, studentized_range, kendalltau, gaussian_filter
+scikit-posthocs>=0.9.0   # optional post-hoc tests / ranking utilities
+
+# --- Data handling & numerics ---
+numpy>=1.24,<2.0         # <2.0 for broad compatibility with the pinned stack
+pandas>=2.0.0
+Pillow>=10.0.0
+
+# --- Plotting & progress ---
+matplotlib>=3.7.0
+seaborn>=0.13.0
+tqdm>=4.66.0
+
+# --- Notebook runtime ---
+jupyterlab>=4.0.0
+ipython>=8.0.0

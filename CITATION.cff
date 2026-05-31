@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "Benchmarking Explainable AI for a MaxViT Breast Ultrasound Classifier"
+authors:
+  - family-names: "Loukil"
+    given-names: "Ons"
+  - family-names: "Mouakher"
+    given-names: "Amira"
+  - family-names: "Barhoumi"
+    given-names: "Walid"
+  - family-names: "El Yacoubi"
+    given-names: "Samira"
+repository-code: "https://github.com/<your-username>/<your-repo>"
+license: MIT
+keywords:
+  - explainable AI
+  - breast ultrasound
+  - MaxViT
+  - benchmarking
+  - saliency maps
+  - faithfulness
+  - localisation
+preferred-citation:
+  type: conference-paper
+  title: "Benchmarking Explainable AI for a MaxViT Breast Ultrasound Classifier: A Multi-Method, Multi-Metric Study"
+  authors:
+    - family-names: "Loukil"
+      given-names: "Ons"
+    - family-names: "Mouakher"
+      given-names: "Amira"
+    - family-names: "Barhoumi"
+      given-names: "Walid"
+    - family-names: "El Yacoubi"
+      given-names: "Samira"
+  collection-title: "Advanced Concepts for Intelligent Vision Systems (ACIVS)"
+  publisher:
+    name: "Springer"
+  year: 2026

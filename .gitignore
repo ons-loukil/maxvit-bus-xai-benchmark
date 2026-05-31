@@ -1,0 +1,33 @@
+# ── Data & weights (distribute via Release / Zenodo / git-LFS, not the repo) ──
+data/unified_ultrasound_dataset/
+data/unified_ultasound_dataset/
+data/masks/
+*.pth
+*.pt
+checkpoints/*.pth
+
+# ── Generated outputs ──
+outputs/
+xai_outputs/
+*.npz
+*.npy
+!kendall_tau.npy            # keep small published artifacts if you want; otherwise remove this line
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# ── Jupyter ──
+.ipynb_checkpoints/
+# Strip notebook outputs before committing (recommended): pip install nbstripout && nbstripout --install
+
+# ── OS / IDE ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

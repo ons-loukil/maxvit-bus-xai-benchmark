@@ -52,9 +52,11 @@ for choosing an explainer in a clinical BUS pipeline:
 | **Plausibility** | LIME, Score-CAM (Avg Drop); Grad-CAM (Avg Increase) | Avg Drop ↓, Avg Increase ↑ |
 | **Computational cost** | LayerCAM, Grad×Input, Grad-CAM (fastest & lightest) | Time, GPU memory, forward passes |
 
-disagreement problem on BUS data, and the cost analysis below adds a practical
-dimension: the two faithfulness leaders (LIME, SHAP) are also the most expensive, so the
-right explainer depends on both the clinical goal *and* the available compute budget.
+A Kendall-τ analysis shows the methods rank pixels **almost independently** of one
+another, which is a direct argument against reporting only a single Grad-CAM heatmap. The
+cost analysis adds a practical dimension: the two faithfulness leaders (LIME, SHAP) are
+also the most expensive, so the right explainer depends on both the clinical goal *and*
+the available compute budget.
 
 ![Qualitative comparison of the ten XAI methods on a benign (top) and a malignant (bottom) case; the radiologist mask is outlined in green.](assets/qualitative_final.png)
 

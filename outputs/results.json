@@ -1,0 +1,13 @@
+{
+  "best_val_acc": 0.8199052132701422,
+  "test_acc": 0.8072289156626506,
+  "test_loss": 0.6257383508136474,
+  "class_names": [
+    "benign",
+    "malignant",
+    "normal"
+  ],
+  "num_epochs": 30,
+  "batch_size": 16,
+  "lr": 0.0002
+}
